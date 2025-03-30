@@ -1,0 +1,7 @@
+**/__pycache__
+**/.DS_Store
+**/.vscode
+**/virtual_env_cw
+**/model_updated.model
+**/src/test/output.json
+**/static

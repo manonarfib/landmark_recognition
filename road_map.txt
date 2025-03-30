@@ -1,0 +1,91 @@
+[FR]
+
+Sprint 0 : 
+
+Installation du socle technique. 
+Analyse des besoins -> lundi matin avant 12:00
+Réflexion autour de la conception -> idem
+
+
+
+Sprint 1 : Prise en main d'OpenCV -> à copier dans le nouveau repo git
+
+Fonctionnalité 1 : Charger et afficher une image.
+Fonctionnalité 2 : Effectuer un traitement sur une image et afficher le résultat du traitement.
+Fonctionnalité 3 : Création d'un module d'utilitaires de manipulation d'images pour la reconnaissance de visages.
+
+
+
+Sprint 2 : Constitution d'une base de données de monuments -> lundi aprem : on commence par une 
+ville, pour laquelle on choisit 8 bâtiments (4 par personne) (Cécile-Manon)
+
+Fonctionnalité 4 : Structuration de la base de données 
+Fonctionnalité 5 : Collecte des données
+
+
+Sprint 3 : Un module de reconnaissance visuelle par apprentissage profond -> lundi aprem (Juliette-Louisa)
+
+Fonctionnalité 6 : Détecter un bâtiment 
+Fonctionnalité 7 : Description des données par apprentissage profond
+Fonctionnalité 8 : Mise en place de la reconnaissance
+Fonctionnalité 9 : Tester la reconnaissance sur la base de données
+
+
+
+Sprint 4 : Finalisation du MVP (mardi aprem)
+
+Fonctionnalité 10 : Un programme principal
+Fonctionnalité 11 : Une interface en ligne de commande avec argparse
+Fonctionnalité 12 :  mettre en orchestre un projet avec une fonction main
+
+
+Sprint 5 : Amélioration du MVP (mercredi matin)
+
+Fonctionnalité 14 : Obtenir et analyser des premiers retours utilisateurs avec un premier MVP
+Fonctionnalité 15 : Obtenir et analyser des premiers retours utilisateurs avec un premier MVP
+
+
+
+Sprint final : fignoler le code pour la soutenance
+Fonctionnalité 16 : rendre son projet exploitable et réutilisable
+
+
+
+Carnet de bord :
+
+14/11/2022 : matin
+- conférence sur green IA 
+- réalisation de l'analyse des besoins (schéma dans Working_docs)
+- implémentation de la fonction pour créer et entrainer le model avec nos bâtiments (Louisa et Juliette), à tester
+- création de la bdd relative à Marseille (script Java) (Louisa et Juliette)
+-
+A faire pour cette aprem : tester les différentes fonctions crées, trier les images
+
+15/11/2022 : 
+test de l'accuracy du model. très mauvaise. temps très long. recherche d'amélioration du model, de la détection, voire changement de model
+InceptionResnetV2 n'est peut-être pas assez efficace pour les bâtiments.
+
+16/11/2022 :
+- essai nouveau model entraîné. nouveau model de base : VGG19. Le modèle n'a pas fonctionné, réutilisation de InceptionResnetV2. (Louisa)
+- création fonction dont_recognize (Louisa)
+- maj main (dont prise en compte dont_recognize) (Louisa)
+- recherche pour optimiser le temps d'entrainement et de chargement du nouveau modèle à l'aide de data_generator, de dropout et de regularisation. 
+  L'entrainement est plus rapide, mais il y a un conflit avec le predict. Pas retenu (Juliette)
+- réduction du franglais dans nos programmes (Cécile)
+- ajout description et commentaires dans create_database (Cécile)
+- réorganisation de la racine : création src, data ,... (Cécile)
+- recherches sur ObjectNessTrainedModel (Cécile)
+- début écriture du README (Cécile et Manon)
+- changement des images à la taille 224x224 et modifications correspondantes dans les autres fichiers (Manon)
+- recherches pour améliorer la justesse du modèle, tente de modifier le learning rate à 0.0001 et l'accuracy atteint les 98% en 2 epochs (assez long à entrainer) + le modèle passe tous les tests (Manon)
+- recherches et résolution de problèmes sur le modèle (toujours le même résultat qui sort, ou une probabilité de 1 alors que le résultat est faux,...) + beaucoup de tests sur les modèles (Manon)
+
+17/11/2022
+- amélioration de la lisibilité du code avec blake et flake8 (Cécile)
+- couverture par tests (Cécile)
+- test fichier requirements (Cécile)
+- affiche l'image avec comme nom de la fenêtre le nom du bâtiment trouvé (Manon)
+- documentation main (Manon)
+- nouvelle fonctionnalité : passer un dossier en paramètre (de plusieurs photos à tester) (Manon)
+- fichier descriptions bâtiment -> pour que la description du bâtiment s'affiche avec le bâtiment reconnu (Louisa)
+- interface (Juliette)
