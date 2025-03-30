@@ -1,0 +1,17 @@
+pour accéder à la fenêtre java : aller dans google image, plus d'outils, outils de développement puis console
+effectuer le script java
+
+1) run download_images.pyimg
+2) message du bash : usage: download_images.py [-h] -u URLS -o OUTPUT
+3) flèche haut (pour recopier chemin python et chemin vers download_image.py)
+4) avant de faire entrée : ajouter -u <chemin vers urls.txt> -o <chemin vers répertoire d'enregistrement>
+
+
+exemples : 
+
+Cécile : 
+/Users/Cecile/opt/miniconda3/bin/python /Users/Cecile/Documents/git/cw_sudistes/face_recognigtion_sudistes/download_images.py -u Data/urls.txt -o dataset/Amandine_Leynaud
+Juliette : 
+C:/Users/julie/AppData/Local/Programs/Python/Python310/python.exe "c:/Users/julie/Documents/Centrale Supélec/Coding week/face_recognition_sudistes/download_images.py" -u urls.txt, -o Prenom_Nom
+Manon:
+C:/Users/arfib/AppData/Local/Programs/Python/Python310/python.exe "c:/Users/arfib/Documents/CentraleSupelec/cours 1A/Coding weeks/rec_faciale/face_recognigtion_sudistes/download_images.py" -u urls.txt, -o Prenom_Nom
