@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Add your folderpath</h1>
+  <a class="btn btn-success" href="/add_folderpath"> Add Folderpath</a>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>Folderpath</th>
+    </tr>
+    {% for item in items %}
+      <tr>
+        <td>{{item.folderpath}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

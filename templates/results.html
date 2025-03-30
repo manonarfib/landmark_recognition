@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="row">
+    <div class="col-3">
+          {% for image in imagelist %}
+          <img src = "{{ url_for('static', filename=image)}}">
+          {% endfor %}
+      </div>
+    <div class="col-3"> 
+        {% for item in res %}
+        <br>
+        <br>
+        <br>
+        <br>
+        <p> {{ item }} </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        {% endfor %}
+    </div>
+  
+{% endblock %}
